@@ -459,19 +459,33 @@ cat > file22
 ``` 
 uniq file22
 ## OUTPUT
+```
+1001 | Ram | 10000 | HR
+1002 | tom |  5000 | Admin
+1003 | Joe |  7000 | Developer
+1005 | Sam |  5000 | HR
+1004 | Sit |  7000 | Dev
+```
 #Using tr command
 
-cat file23 | tr [:lower:] [:upper:]
+cat file22 | tr [:lower:] [:upper:]
  ## OUTPUT
-
-cat < urllist.txt
+```
+1001 | RAM | 10000 | HR
+1001 | RAM | 10000 | HR
+1002 | TOM |  5000 | ADMIN
+1003 | JOE |  7000 | DEVELOPER
+1005 | SAM |  5000 | HR
+1004 | SIT |  7000 | DEV
+```
+cat > urllist.txt
 ```
 www. yahoo. com
 www. google. com
 www. mrcet.... com
 ^d
  ```
-cat > urllist.txt
+cat < urllist.txt
 ```
 www. yahoo. com
 www. google. com
@@ -479,18 +493,35 @@ www. mrcet.... com
  ```
 cat urllist.txt | tr -d ' '
  ## OUTPUT
-
-
+```
+www.yahoo.com
+www.google.com
+www.mrcet....com
+^d
+```
  
 cat urllist.txt | tr -d ' ' | tr -s '.'
 ## OUTPUT
-
+```
+www.yahoo.com
+www.google.com
+www.mrcet.com
+^d
+```
 
 
 #Backup commands
 tar -cvf backup.tar *
 ## OUTPUT
-
+```
+bench.py
+file21
+file22
+hello.c
+hello.js
+readme.txt
+urllist.txt
+```
 
 mkdir backupdir
  
@@ -532,7 +563,11 @@ stop
 
 cat herecheck.txt
 ## OUTPUT
-
+```
+hello in this world
+i cant stop
+for this non stop movement
+```
 
 cat < scriptest.sh 
 ```bash
@@ -570,10 +605,55 @@ chmod 777 scriptest.sh
 ./scriptest.sh 1 2 3
 
 ## OUTPUT
-
+```
+./scriptest.sh: line 1: #!/bin/sh: not found
+“File name is ./scriptest.sh ”
+File name is  scriptest.sh
+“First arg. is ” 1
+“Second arg. is ” 2
+“Third arg. is ” 3
+“Fourth arg. is ”
+The $@ is  1 2 3
+The $\# is  1#
+The $$ is  200
+PID   USER     TIME  COMMAND
+    1 root      0:01 {init} /bin/sh /sbin/init
+    2 root      0:00 [kthreadd]
+    3 root      0:00 [kworker/0:0]
+    4 root      0:00 [kworker/0:0H]
+    5 root      0:00 [kworker/u2:0]
+    6 root      0:00 [mm_percpu_wq]
+    7 root      0:00 [ksoftirqd/0]
+    8 root      0:00 [kdevtmpfs]
+    9 root      0:00 [oom_reaper]
+   10 root      0:00 [writeback]
+   11 root      0:00 [kcompactd0]
+   12 root      0:00 [crypto]
+   13 root      0:00 [bioset]
+   14 root      0:00 [kblockd]
+   15 root      0:00 [kworker/0:1]
+   16 root      0:00 [kswapd0]
+   17 root      0:00 [bioset]
+   34 root      0:00 [khvcd]
+   35 root      0:00 [bioset]
+   36 root      0:00 [bioset]
+   37 root      0:00 [bioset]
+   38 root      0:00 [bioset]
+   39 root      0:00 [bioset]
+   40 root      0:00 [bioset]
+   41 root      0:00 [bioset]
+   42 root      0:00 [bioset]
+   55 root      0:00 settime -d /
+   56 root      0:00 dhcpcd -q
+   61 root      0:00 sh -l
+   62 root      0:00 [kworker/u2:1]
+  200 root      0:00 {busybox} ash ./scriptest.sh 1 2 3
+  203 root      0:00 ps
+```
  
 ls file1
 ## OUTPUT
+file1
 
 echo $?
 ## OUTPUT 
