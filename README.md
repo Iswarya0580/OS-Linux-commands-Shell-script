@@ -2,8 +2,8 @@
 Operating systems Lab exercise
 # Linux commands-Shell scripting
 Linux commands-Shell scripting
-# Developed By:Iswarya P
-# Register no: 212223230082 
+## Developed By:Iswarya P
+## Register no: 212223230082 
 # AIM:
 To practice Linux Commands and Shell Scripting
 
