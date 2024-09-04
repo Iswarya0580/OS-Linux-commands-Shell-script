@@ -2,7 +2,8 @@
 Operating systems Lab exercise
 # Linux commands-Shell scripting
 Linux commands-Shell scripting
-
+# Developed By:Iswarya P
+# Register no: 212223230082 
 # AIM:
 To practice Linux Commands and Shell Scripting
 
@@ -48,7 +49,6 @@ c.k. shukla
 s.n. dasgupta
 sumit chakrobarty
 ```
-
 
 cat < file2
 ## OUTPUT
@@ -551,7 +551,12 @@ echo 'echo Hello World‘; exit 0 >> my-script.sh
 chmod 755 my-script.sh
 ./my-script.sh
 ## OUTPUT
-
+```
+hello in this world
+i ccant stop
+for this non stop movement
+stop
+```
  
 cat << stop > herecheck.txt
 ```
@@ -667,7 +672,7 @@ abcd
  
 echo $?
  ## OUTPUT
-
+127
 
  
 # mis-using string comparisons
@@ -706,7 +711,7 @@ chmod 755 strcomp.sh
  
 ./strcomp.sh 
 ## OUTPUT
-
+You are the owner of the /etc/passwd file
 
 # check file ownership
 cat < psswdperm.sh 
@@ -733,7 +738,8 @@ fi
  ```
 ./psswdperm.sh
 ## OUTPUT
-
+"/root The object exists, is it a file?"
+"No,/root it is not a file!"
 # check if with file location
 cat>ifnested.sh 
 ```bash
@@ -782,6 +788,11 @@ fi
 
 
 
+“/home/sec The object exists, is it a file?”
+“No,/home/sec it is not a file!”
+“But /home/sec/.bash_history is a file!”
+
+
 # using numeric test comparisons
 cat > iftest.sh 
 ```bash
@@ -822,7 +833,9 @@ fi
 $ chmod 755 iftest.sh
  
 $ ./iftest.sh 
-##OUTPUT
+## OUTPUT
+“The test value 10 is greater than 5”
+“The values are different”
 
 # check if a file
 cat > ifnested.sh 
@@ -871,7 +884,10 @@ fi
 $ chmod 755 ifnested.sh
  
 $ ./ifnested.sh 
-##OUTPUT
+## OUTPUT
+“/home/sec The object exists, is it a file?”
+“No,/home/sec it is not a file!”
+“But /home/sec/.bash_history is a file!”
 
 # looking for a possible value using elif
 cat elifcheck.sh 
@@ -900,6 +916,8 @@ $ chmod 755 elifcheck.sh
  
 $ ./elifcheck.sh 
 ## OUTPUT
+./elifcheck.sh: line 1: #!/bin/bash: No such file or directory
+Sorry, you are not allowed here
 
 
 # testing compound comparisons
@@ -916,7 +934,8 @@ fi
 $ chmod 755 ifcompound.sh
 $ ./ifcompound.sh 
 ## OUTPUT
-
+./ifcompound.sh: line 1: #!/bin/bash: No such file or directory
+The file exists and you can write to it
 # using the case command
 cat >casecheck.sh 
 ```bash
@@ -935,7 +954,10 @@ esac
 $ chmod 755 casecheck.sh 
  
 $ ./casecheck.sh 
- 
+## output
+./elifcheck.sh: line 1: #!/bin/bash: No such file or directory
+Sorry, you are not allowed here
+
 cat > whiletest
 ```bash
 #!/bin/bash
@@ -964,7 +986,13 @@ done
 ``` 
 $ chmod 755 untiltest.sh
  
- 
+ ## output
+ ./untiltest.sh: line 1: #using: command not found
+100
+75
+50
+25
+
  
 cat forin1.sh 
 ```bash
@@ -977,7 +1005,16 @@ done
  ```
  
 $ chmod 755 forin1.sh
- 
+ ## output
+ ./forin1.sh: line 1: #!/bin/bash: No such file or directory
+./forin1.sh: line 2: #basic: command not found
+The next state is Alabama
+The next state is Alaska
+The next state is Arizona
+The next state is Arkansas
+The next state is California
+The next state is Colorado
+
  
 cat forin2.sh 
 ```bash
@@ -1014,7 +1051,12 @@ echo "word:$test"
 done
 ```
 $ ./forin3.sh 
- 
+ ## output
+ “word:I”
+“word:dont know if thisll”
+“word:work”
+
+
 cat forin1.sh 
 ```bash
 #!/bin/bash
@@ -1027,6 +1069,15 @@ done
 $ chmod 755 forin1.sh
 
 ## OUTPUT
+```
+The next state is Alabama
+The next state is Alaska
+The next state is Arizona
+The next state is Arkansas
+The next state is California
+The next state is Colorado
+```
+
 cat forinfile.sh 
 ```bash
 #!/bin/bash
@@ -1048,7 +1099,15 @@ Bhadrachalam
 Khammam
 
 ## OUTPUT
-
+```
+Visit beautiful cities
+Visit beautiful cities
+Visit beautiful cities
+Visit beautiful cities
+Visit beautiful cities
+Visit beautiful cities
+Visit beautiful cities
+```
 
 cat forctype.sh 
 ```bash
@@ -1075,6 +1134,13 @@ done
 $ chmod 755 forctype.sh
 $ ./forctype1.sh 
 ## OUTPUT
+```
+The value is i is 1
+The value is i is 2
+The value is i is 3
+The value is i is 4
+The value is i is 5
+```
 
 cat fornested1.sh 
 ```bash
@@ -1093,7 +1159,13 @@ $ chmod 755 fornested1.sh
  
 $ ./fornested1.sh 
  ## OUTPUT
-
+```
+1 - 5
+2 - 4
+3 - 3
+4 - 2
+5 - 1
+```
  
 cat forbreak.sh 
 ```bash
@@ -1110,6 +1182,20 @@ done
 echo "The for loop is completed“
 ```
 ## OUTPUT
+```
+Starting loop 1:
+ Inside loop: 1
+ Inside loop: 2
+ Inside loop: 3
+Starting Loop 2:
+ Inside loop: 1
+ Inside loop: 2
+ Inside loop: 3
+Starting Loop 3:
+ Inside loop: 1
+ Inside loop: 2
+ Inside loop: 3
+```
 
 $ chmod 755 forbreak.sh
  
@@ -1135,7 +1221,12 @@ $ chmod 755 forcontinue.sh
  
 $ ./forcontinue.sh 
 ## OUTPUT
- 
+```
+ Iteration number: 1
+Iteration number: 2
+The for loop is completed
+```
+
 cat exread.sh 
 ```bash
 #!/bin/bash
@@ -1150,6 +1241,13 @@ $ chmod 755 exread.sh
 $ ./exread.sh 
 ## OUTPUT
 
+```
+#!/bin/bash
+# testing the read command
+echo -n "Enter your name: "
+read name
+echo "Hello $name, welcome to my program. "
+```
 
  cat exread1.sh
 ```bash
@@ -1161,8 +1259,10 @@ echo "Hello $name, welcome to my program. “
 $ chmod 755 exread1.sh 
 
 ## OUTPUT
-
-
+```
+Enter your name: Karthikeyan
+Hello Karthikeyan, welcome to my program. 
+```
 
 $ ./exread1.sh 
  
@@ -1183,10 +1283,10 @@ fi
 ```
 ## OUTPUT
  ./funcex.sh 
-
+Usage: badtest1 a b
  
  ./funcex.sh 1 2
-
+ The result is 2
  
 cat argshift.sh
 ```bash
@@ -1200,7 +1300,10 @@ $ chmod 777 argshift.sh
 
 ## OUTPUT
 $ ./argshift.sh 1 2 3
- 
+ 1
+2
+3
+
  cat argshift1.sh
 ```bash
  #/bin/bash 
@@ -1217,7 +1320,10 @@ done
 $ chmod 777 argshift.sh
 ## OUTPUT
 $ ./argshift.sh 1 2 3
- 
+ 1
+2
+3
+
 cat argshift.sh
 ```bash
 #!/bin/bash 
@@ -1230,22 +1336,21 @@ set +x
 ```
 ## OUTPUT
  ./argshift.sh 1 2 3
- 
- 
-cat > nc.awk
-```bash
-BEGIN{}
-{
-print len=length($0),"\t",$0 
-wordcount+=NF
-chrcnt+=len
-}
-END {
-print "total characters",chrcnt 
-print "Number of Lines are",NR
-print "No of Words count:",wordcount
-}
- ```
+ #!/bin/bash 
++ ((  3  ))
++ echo 1 
+1
++ shift
++ ((  2  ))
++ echo 2
+2
++ shift
++ ((  1  ))
++ echo 3
++ shift
++ ((  0  ))
++ set +x
+
 cat>data.dat
 ```bash
 bcdfghj
@@ -1261,7 +1366,23 @@ ubcdfghj
 ```
 awk -f nc.awk data.dat
 ## OUTPUT 
- 
+ ```
+7         bcdfghj
+8	  abcdfghj
+7	  bcdfghj
+8  	  ebcdfghj
+7	  bcdfghhj
+8	  ibcdfghj
+7	  bcdfghj
+8	  obcdfghj
+7	  bcdfghj
+8 	  ubcdfghj
+total characters 75
+Number of Lines are 10
+No of Words count: 10
+
+```
+
 cat > palindrome.sh
 ```bash
 #num=545
@@ -1288,7 +1409,21 @@ else
 fi
 ```
 ## OUTPUT 
+```
+locathost:~# chmod 755 palindrome.sh
+locathost:~# ./palindrome.sh
+Enter the number
+21
+Number is NOT palindrome
+
+locathost:~# chmod 755 palindrome.sh
+locathost:~# ./palindrome.sh
+Enter the number
+33
+Number is palindrome
+locathost:~#
 
 
+```
 # RESULT:
 The Commands are executed successfully.
